@@ -1,18 +1,20 @@
-class bullet {
-    constructor(y) {
-        this.x = 60;
+class Bullet {
+    constructor(x, y) {
+        this.x = x;
         this.y = y;
-        this.width = 10;
-        this.height = 5;
+        this.width = bulletWidth;
+        this.height = bulletHeight;
+        this.speed = bulletSpeed;
+        this.power = Math.floor(100/3);
     }
 
     move() {
-        this.x += 20;
+        this.x += this.speed;
     }
 
     draw() {
         context.fillStyle = "grey";
         context.fillRect(this.x, this.y, this.width, this.height);
-        this.move();
+        context.fill();
     }
 }

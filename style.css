@@ -15,7 +15,15 @@
   }
 
 canvas {
+    position : absolute;
+    top: 25%;
+    left: 25%;
+    transform: (-50%, -50%);
     border : 1px solid black;
+    width: 1000px;
+    height: 475px;
+    background-color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 
