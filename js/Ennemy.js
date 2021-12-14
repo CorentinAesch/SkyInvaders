@@ -15,10 +15,11 @@ class Ennemy {
     }
 
     draw() {
-        context.fillStyle = "black";
-        context.fillRect(this.x, this.y, this.width, this.height);
+        const image = new Image();
+        image.src = "/Images/kisspng-sprite-go-space-android-flying-saucer-universe-def-alien-spacecraft-5b2e3d8e862139.2886687715297570705494.png";
+        context.drawImage(image, this.x, this.y, this.width, this.height);
         context.fillStyle = "gold";
-        context.font = "30px Orbitron", 
-        context.fillText(Math.floor(this.health), this.x + 15, this.y + 15);
+        context.font = "20px Orbitron", 
+        context.fillText(Math.floor(this.health), this.x + 10, this.y + 10);
     }
 }

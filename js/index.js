@@ -10,8 +10,8 @@ const playerHeight = 50;
 const playerSpeed = 25;
 const playerHealth = 100;
 
-const ennemyWidth = 75;
-const ennemyHeight = 75;
+const ennemyWidth = 50;
+const ennemyHeight = 50;
 const ennemySpeed = Math.random() * 0.2 + 0.4;
 
 const bulletWidth = 10;
@@ -27,7 +27,7 @@ let player = {};
 
 const ennemies = [];
 const bullets = [];
-const score = 0;
+let score = 0;
 let gameOver = false;
 let ennemiesFrequency = 0;
 
@@ -66,15 +66,16 @@ function handleBullets(){
         bullets[i].draw();
 
         for (let j = 0; j < ennemies.length; j++) {
-            if (bullets[i] && ennemies[i].health > 0 && detectCollision(bullets[i], ennemies[j]) === true) {
+            if (bullets[i] && ennemies[j].health > 0 && detectCollision(bullets[i], ennemies[j]) === true) {
                 bullets.splice(i, 1);
                 ennemies[j].health -= bulletPower;
                 i--;
-            } else {
-                ennemies.splice(j, 1);   //<-- Probleme
+            } 
+            if (ennemies[j].health <= 0) {
+                ennemies.splice(j, 1);
                 score = score + 100; 
                 j--;
-            }
+            } 
         }
         if (bullets[i] && bullets[i].x > canvas.width) {
             bullets.splice(i, 1);
@@ -105,8 +106,8 @@ function handleEnnemies() {
             gameOver = true;
         }
     }
-    if (ennemiesFrequency % 100 === 1) { 
-        let verticalPosition = Math.floor((Math.random() * 8 + 0 ) * ennemyHeight);
+    if (ennemiesFrequency % 300 === 0) { 
+        let verticalPosition = Math.floor((Math.random() * (10 - 0) + 0 )) * ennemyHeight;
         ennemies.push(new Ennemy(verticalPosition));
     }
 }
@@ -129,6 +130,7 @@ function HandleGameStatus() {
         context.fillStyle = 'black';
         context.font = '60px Orbitron';
         context.fillText('GAME OVER', 300, 250);
+        context.fillText('SCORE: ' + score, 300, 310);
     }
 }
 
