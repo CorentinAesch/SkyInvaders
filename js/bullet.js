@@ -14,7 +14,7 @@ class Bullet {
 
     draw() {
         const bullet = new Image();
-        bullet.src = "/Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/planes/torpedo/torpedo.png";
+        bullet.src = "./Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/planes/torpedo/torpedo.png";
         context.drawImage(bullet, this.x, this.y, this.width, this.height);
     }
 

@@ -8,7 +8,7 @@ class Ennemy {
         this.health = 100;
         this.timer = 0;
         this.image = new Image();
-        this.image.src = "/Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/planes/plane_1/plane_1_red_inverted.png";
+        this.image.src = "./Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/planes/plane_1/plane_1_red_inverted.png";
     }
 
     move() {

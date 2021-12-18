@@ -36,10 +36,10 @@ let ennemiesFrequency = 0;
 let requestAnimationId = null;
 
 let exImg = new Image();
-exImg.src = "/Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/explosion-sprite-sheet.png";
+exImg.src = "./Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/explosion-sprite-sheet.png";
 
 let fireImg = new Image();
-fireImg.src = "/Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/planes/torpedo/Taille_personnalisée-removebg-preview.png";
+fireImg.src = "./Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/planes/torpedo/Taille_personnalisée-removebg-preview.png";
 
 
 // Functions for classes
