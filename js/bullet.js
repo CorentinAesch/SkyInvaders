@@ -18,9 +18,8 @@ class Bullet {
         context.drawImage(bullet, this.x, this.y, this.width, this.height);
     }
 
-    fire () {
-        for (let i = 0; i < bullets.length; i++) {
-            fires.push(new Fire((this.x - fireWidth) + 300, ((this.y + bulletHeight/2) - fireHeight/2) + 77, fireImg));
-        }
+    drawFire () {
+        let fire = new Fire((this.x - fireWidth) + 300, ((this.y + bulletHeight/2) - fireHeight/2) + 77, fireImg);
+        fire.animate();
     }
 }

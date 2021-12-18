@@ -89,6 +89,7 @@ function shootBullet() {
     let bulletX = player.x + (playerWidth - bulletWidth);
     let bulletY = (player.y + (playerHeight/2)) - bulletHeight/2;
     bullets.push(new Bullet(bulletX, bulletY));
+    fires.push(new Fire((bulletX - fireWidth) + 300, ((bulletY + bulletHeight/2) - fireHeight/2) + 77, fireImg));
 }
 
 function handleBullets(){
@@ -96,7 +97,8 @@ function handleBullets(){
     for (let i = 0; i < bullets.length; i++) {
         bullets[i].move();
         bullets[i].draw();
-        //bullets[i].fire();
+        bullets[i].drawFire();
+        
         for (let j = 0; j < ennemies.length; j++) {
             if (bullets[i] && ennemies[j].health > 0 && detectCollision(bullets[i], ennemies[j]) === true) {
                 bullets.splice(i, 1);
@@ -114,12 +116,6 @@ function handleBullets(){
             bullets.splice(i, 1);
             i --;
         }
-    }
-}
-
-function handleFires() {
-    for(let i=0; i < fires.length; i++){
-        fires[i].animate();
     }
 }
 
@@ -195,7 +191,6 @@ function animate() {
     handleEnnemies();
     HandleGameStatus();
     handleExplosions();
-    handleFires();
     ennemiesFrequency++;
     if (!gameOver) requestAnimationId = requestAnimationFrame(animate);
 }

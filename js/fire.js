@@ -11,7 +11,6 @@ class Fire {
     }
     animate() {
         if(this.frame < this.frames){
-            //context.clearRect(this.x, this.y, this.width, this.height);
             context.drawImage(this.image, this.width * this.frame, 0, this.width, this.height, this.x - 50, this.y - 50, 20, 30);
         } else {
             this.frame = 0;
