@@ -1,29 +1,95 @@
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('/Images/unnamed.jpg');
+    background-size: cover; 
+}
+
+#game-intro {
+    margin-top: 160px;
+    font-size: 30px;
+    color: white;
+}
+
+#title{
+    width: 70%;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+#goal {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#instructions {
+    position: fixed;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+    color: #2793AD;
+    font-weight: bolder;
+}
+
+#plane_1{
+    width: 20%;
+    height: auto;
+    position: fixed;
+    left: 15%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+#plane_2{
+    width: 20%;
+    height: auto;
+    position: fixed;
+    left: 85%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+
 #game-board {
     float: left;
     padding: 20px 0px;
 }
 
+#borders {
+    position: fixed;
+    left: 50%;
+    top: 50.8%;
+    transform: translate(-50%, -50%);
+}
+
 #start-button {
     font-size: 30px;
-    background-color: #870007;
+    background-color: #2793AD;
     color: #fff;
     padding: 20px 40px;
     border: 0;
     box-shadow: 0;
     border-radius: 5px;
     margin-bottom: 20px;
-  }
-
-canvas {
-    position : absolute;
-    top: 25%;
-    left: 25%;
-    transform: (-50%, -50%);
-    border : 1px solid black;
-    width: 1000px;
-    height: 475px;
-    background-color: #fff;
-    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
 }
 
-
+canvas {
+    font-weight: bold;
+    width: 1300px;
+    height: 600px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('/Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/sky_background/example/Taille\ personnalisée\ –\ 1.png');
+    background-size: cover;
+}

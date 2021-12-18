@@ -7,6 +7,8 @@ class Ennemy {
         this.speed = ennemySpeed;
         this.health = 100;
         this.timer = 0;
+        this.image = new Image();
+        this.image.src = "/Images/PLanegamecomplete2dgameassetpack--115i4a6j439t9i112e/planes/plane_1/plane_1_red_inverted.png";
     }
 
     move() {
@@ -15,11 +17,9 @@ class Ennemy {
     }
 
     draw() {
-        const image = new Image();
-        image.src = "/Images/kisspng-sprite-go-space-android-flying-saucer-universe-def-alien-spacecraft-5b2e3d8e862139.2886687715297570705494.png";
-        context.drawImage(image, this.x, this.y, this.width, this.height);
-        context.fillStyle = "gold";
-        context.font = "20px Orbitron", 
-        context.fillText(Math.floor(this.health), this.x + 10, this.y + 10);
+        context.drawImage(this.image, this.x, this.y, this.width, this.height);
+        context.fillStyle = "grey";
+        context.font = "30px Montserrat", 
+        context.fillText(Math.floor(this.health), this.x + 10, this.y);
     }
 }
